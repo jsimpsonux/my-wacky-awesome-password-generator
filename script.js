@@ -90,19 +90,28 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  var input = prompt("Password requirements: Between the lengths of 8 and 128 characters, Lowercase, Uppercase, Numeric and Special characters ($@%&*,etc)");
+  
+  if (128 < input, 8 > input) {
+    alert("Please select a number between 8 and 12.");
+  } else {
+    alert("Proceed");
+  }
 
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var index = Math.floor(Math.random() * arr.length);
+  var element = arr[index];
+  return element
 }
+
+console.log(getRandom(upperCasedCharacters));
 
 // Function to generate password with user input
 function generatePassword() {
-  prompt("Passwords will be between the lengths of 8 and 128 characters");
-  // prompt("Passwords will have Lowercase, Uppercase, Numeric and Special characters ($@%&*,etc)");
-
+  
 }
 
 // Get references to the #generate element
