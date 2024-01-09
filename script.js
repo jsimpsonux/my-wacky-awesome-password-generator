@@ -92,10 +92,11 @@ var upperCasedCharacters = [
 function getPasswordOptions() {
   var input = prompt("Password requirements: Between the lengths of 8 and 128 characters, Lowercase, Uppercase, Numeric and Special characters ($@%&*,etc)");
 
-  if ((!isNaN(input.length) || (128 < Input && 8 > Input))) {
+  if ((!isNaN(input.length) || (128 > input.length && 8 < input.length))) {
     console.log('It is a number');
+    var x = Number(input.length)
     let numberObject = {
-      input: input.length
+      x: x
     };
     return numberObject;
   } else {
