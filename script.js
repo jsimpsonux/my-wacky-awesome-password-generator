@@ -91,12 +91,15 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
   var input = prompt("Password requirements: Between the lengths of 8 and 128 characters, Lowercase, Uppercase, Numeric and Special characters ($@%&*,etc)");
+  var numInput = parseInt(input);
   
-  if (128 < input, 8 > input) {
+  if (128 < numInput, 8 > numInput) {
     alert("Please select a number between 8 and 12.");
   } else {
     alert("Proceed");
   }
+
+  return numInput
 
 }
 
@@ -111,8 +114,12 @@ console.log(getRandom(upperCasedCharacters));
 
 // Function to generate password with user input
 function generatePassword() {
-  
+  var numberChar = getRandom * numInput;
+
+  return numberChar
 }
+
+console.log(generatePassword());
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
